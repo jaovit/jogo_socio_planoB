@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta name="google-site-verification" content="fHeOkCcJxfGwFOftEdyXf-BeJzy-2IM3bd1ZKiBDwvI" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <script src="perguntas.js" defer></script>
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Moeda digital</title>
+</head>
+
+<body>
+    <section class="inicio" id="inicio">
+        <gambiarra class="borda"></gambiarra>
+        <h1>Inicio</h1>
+        <label for="nome" class="nm">Nome do jovem:</label>
+        <input type="text" id="nome">
+
+        <fieldset class="botoes">
+            <legend class="ed"> Escolha a dificuldade: </legend>
+
+            <input type="radio" name="dif" value="Jambu" id="facil" onclick="difi = 20">
+            <label for="facil" class="facil">
+                <h1>Jambu</h1>
+            </label>
+
+            <input type="radio" name="dif" value="Médio" id="medio" onclick="difi = 60" checked>
+            <label for="medio" class="medio">
+                <h1> Médio </h1>
+            </label>
+
+            <input type="radio" name="dif" value="dificil" id="dificil" onclick="difi = 90">
+            <label for="dificil" class="dificil">
+                <h1> Dificil </h1>
+            </label>
+
+        </fieldset>
+        <input type="button" value="Start" id="start" onclick="iniciar()">
+    </section>
+
+
+    <section class="quest" id="sec-quest">
+
+        <div class="sla">
+            <h1>Quest</h1>
+        </div>
+        <div class="quest_real">
+            <h1 class="h1">Responda:</h1>
+            <p id="quest">pergunta</p>
+        </div>
+        <div class="opcoes">
+            <button id="a"  class="botoes" 
+                onclick="res(document.getElementById('a').innerHTML, document.getElementById('a'));"> a </button>
+            <button id="b" class="botoes"
+                onclick="res(document.getElementById('b').innerHTML, document.getElementById('b'));"> b </button>
+            <button id="c" class="botoes"
+                onclick="res(document.getElementById('c').innerHTML, document.getElementById('c'));"> c </button>
+            <button id="d" class="botoes"
+                onclick="res(document.getElementById('d').innerHTML, document.getElementById('d'));"> d </button>
+        </div>
+        <div class="status">
+            <h2>Jovem:<h2 id="nm">Ser sem nome</h2>
+            </h2>
+            <h2>Boyscoins:<h2 id="boyscoins">0</h2>
+            </h2>
+            <h2>Tempo:<h2 id="tempo">0</h2>
+            </h2>
+            <h2>Pergunta:<h2 id="n-pergunt">1/5</h2>
+            </h2>
+            <h2>Acertos:<h2 id="acertos">0</h2>
+            </h2>
+        </div>
+        <div id="triangulo"></div>
+        <div id="dicaText"> dica </div>
+        <div class="bonus">
+            <button id="pular" onclick="bonuS = 1;bonus()"><div>Pular</div></button>
+            <label for="pular" > BYC: 25</label>
+            <button id="dica" onclick="bonuS = 3;bonus()"><div>dica</div></button>
+            <label for="dica"> BYC: 75</label>
+            <button id="meio_res" onclick="bonuS = 2;bonus()"><div>1/2</div></button>
+            <label for="meio_res"> BYC: 40</label>
+            
+        </div>
+        <button id="proximo" onclick="proximo()"> Proximo </button>
+
+    </section>
+
+
+    <section class="resultdo" id="fim">
+
+        <div class="reniciar">
+            <input type="button" value="reniciar" id="reniciar" onclick="reset()">
+        </div>
+
+        <table id="table" class="table">
+            <thead>
+                <th class="th">Rodada</th>
+                <th class="th">Jovem</th>
+                <th class="th">Boyscoins</th>
+                <th class="th">Acertos</th>
+                <th class="th">Erros</th>
+            </thead>
+            <tbody id="tbody" class="tbody">
+
+                <!-- <tr>
+                <td class="td2">total</td>
+                <td class="td2">total</td>
+                <td class="td2">total</td>
+                <td class="td2">total</td>
+                <td class="td2">total</td>
+            </tr>
+             -->
+            </tbody>
+        </table>
+
+
+    </section>
+</body>
+
+</html>
