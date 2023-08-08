@@ -1,0 +1,150 @@
+.inicio{
+    width: 26vw;
+    height: 34.75vw;
+    background: rgba(255, 255, 255, .1);
+    /* background-image: linear-gradient(to bottom,rgba(255,255,255,.08) 0%,rgba(255,255,255,.03) 100%); */
+    border-radius: .8vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fdfdfd;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.borda{
+    position: absolute;
+    top: 2vw;
+    left: 50%;
+    transform: translateX(-50%);
+    border: solid .13vw orange;
+    padding: 15.9vw 12vw;
+}
+
+.inicio > h1{
+    position: absolute;
+    background:orange;
+    padding: .5vw 3.5vw;
+    border-radius: .3vw;
+    font-weight: 600;
+    font-size: 1.35vw;
+    top: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nm, .ed{
+    position: absolute;
+    font-size: 1vw;
+    font-weight: 500;
+    top: 5vw;
+    left: 1.75vw;
+    display: inline-block;
+    color: #b4b3b3;
+}
+
+#nome {
+    position: absolute;
+    width: 18vw;
+    height: 2vw;
+    padding: 0 1vw ;
+    top: 7vw;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 166, 0, 0.74);
+    font-size: 1vw;
+    font-weight: 500;
+    background: rgb(0, 0, 0);
+    border: solid .075vw rgb(204, 0, 255);
+    border-radius: .35vw;
+    text-align: center;
+}
+
+.ed{
+    top: 11vw;
+}
+
+.facil, .medio, .dificil{
+    position: absolute;
+    display: flex;
+    top: 13.2vw;
+    width: 17.5vw;
+    height: 2.85vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    background: orange;
+    border-radius: .3vw;
+    color: #f1f1f1;
+    font-size: 1.1vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.medio{
+    top: 17.3vw;
+}
+
+.dificil {
+    top:21.4vw;
+}
+
+label > h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.facil:hover, .medio:hover, .dificil:hover{
+    width: 18vw;
+    height: 3vw;
+    font-size: 1.2vw;
+}
+
+input[id="facil"]:nth-child(2):checked+label{
+    background: rgb(204, 0, 255);
+    width: 18vw;
+    height: 3vw;
+    font-size: 1.2vw;
+}
+
+input[id="medio"]:checked+label{
+    background: rgb(204, 0, 255);
+    width: 18vw;
+    height: 3vw;
+    font-size: 1.2vw;
+}
+
+input[id="dificil"]:checked+label{
+    background: rgb(204, 0, 255);
+    width: 18vw;
+    height: 3vw;
+    font-size: 1.2vw;
+}
+
+.botoes > input{
+    display: none;
+}
+
+#start{
+    position: absolute;
+    top: 27.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12.5vw;
+    height: 3vw;
+    background: rgb(204, 0, 255);
+    border: none; 
+    border-radius: .3vw; 
+    font-family: 'Montserrat', sans-serif;
+    color: #d3d3d3;
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+
+#start:hover{
+    width: 13.5vw;
+    height: 3.2vw;
+    top: 27.38vw;
+    font-size: 1.5vw;
+}
