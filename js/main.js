@@ -6,7 +6,7 @@ var errosTotais = 0;
 var difi = 60;
 var stent = 1;
 var pergunt;
-var boyscoins = 1000;
+var boyscoins = 100;
 const quest = document.getElementById("sec-quest");
 const inicio = document.getElementById("inicio");
 const fimSection = document.getElementById("fim");
@@ -64,7 +64,7 @@ function iniciar() {
             stent = 1;
             acertosTotais = 0;
             errosTotais = 0;
-            boyscoins = 1000;
+            boyscoins = 100;
             nmData = nome;
             statusFunc();
         }
