@@ -6,10 +6,10 @@ var errosTotais = 0;
 var difi = 60;
 var stent = 1;
 var pergunt;
-var boyscoins = 0;
-var quest = document.getElementById("sec-quest");
-var inicio = document.getElementById("inicio");
-var fimSection = document.getElementById("fim");
+var boyscoins = 1000;
+const quest = document.getElementById("sec-quest");
+const inicio = document.getElementById("inicio");
+const fimSection = document.getElementById("fim");
 var nome;
 var nmData;
 var doisJog = false;
@@ -19,8 +19,6 @@ var arrayElemt = [];
 var certoElemt;
 var gambiarra_m = [];
 var gambiarra_l = [];
-var input = document.getElementById("nome");
-var limiteCaracteres = 12;
 var segundos = 0;
 var timer;
 var dica = false;
@@ -31,10 +29,12 @@ var remover1;
 var remover2;
 var cortado = false;
 var gambiarra2 = -2;
+const input = document.getElementById("nome");
 
 input.addEventListener("input", function () {
-    if (input.value.length > limiteCaracteres) {
-        input.value = input.value.slice(0, limiteCaracteres);
+
+    if (input.value.length > 12) {
+        input.value = input.value.slice(0, 12);
     }
 });
 
@@ -64,7 +64,7 @@ function iniciar() {
             stent = 1;
             acertosTotais = 0;
             errosTotais = 0;
-            boyscoins = 0;
+            boyscoins = 1000;
             nmData = nome;
             statusFunc();
         }
