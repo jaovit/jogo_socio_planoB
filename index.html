@@ -13,14 +13,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Moeda digital</title>
+    <title>Indicadores sociais</title>
 </head>
 
 <body>
     <section class="inicio" id="inicio">
         <gambiarra class="borda"></gambiarra>
         <h1>Inicio</h1>
-        <label for="nome" class="nm">Nome do jovem:</label>
+        <label for="nome" class="nm">Nome:</label>
         <input type="text" id="nome">
 
         <fieldset class="botoes">
@@ -33,16 +33,16 @@
 
             <input type="radio" name="dif" value="Médio" id="medio" onclick="difi = 60" checked>
             <label for="medio" class="medio">
-                <h1> Médio </h1>
+                <h1> Normal </h1>
             </label>
 
             <input type="radio" name="dif" value="dificil" id="dificil" onclick="difi = 90">
             <label for="dificil" class="dificil">
-                <h1> Dificil </h1>
+                <h1> Normal soq com 7 questões</h1>
             </label>
 
         </fieldset>
-        <input type="button" value="Start" id="start" onclick="iniciar()">
+        <input type="button" value="Iniciar" id="start" onclick="iniciar()">
     </section>
 
 
@@ -66,9 +66,9 @@
                 onclick="res(document.getElementById('d').innerHTML, document.getElementById('d'));"> d </button>
         </div>
         <div class="status">
-            <h2>Jovem:<h2 id="nm">Ser sem nome</h2>
+            <h2>Nome:<h2 id="nm">Ser sem nome</h2>
             </h2>
-            <h2>Boyscoins:<h2 id="boyscoins">0</h2>
+            <h2>Pontos:<h2 id="boyscoins">0</h2>
             </h2>
             <h2>Tempo:<h2 id="tempo">0</h2>
             </h2>
@@ -81,11 +81,11 @@
         <div id="dicaText"> dica </div>
         <div class="bonus">
             <button id="pular" onclick="bonuS = 1;bonus()"><div>Pular</div></button>
-            <label for="pular" > BYC: 25</label>
+            <label for="pular" > PTS: 25</label>
             <button id="dica" onclick="bonuS = 3;bonus()"><div>dica</div></button>
-            <label for="dica"> BYC: 75</label>
+            <label for="dica"> PTS: 75</label>
             <button id="meio_res" onclick="bonuS = 2;bonus()"><div>1/2</div></button>
-            <label for="meio_res"> BYC: 40</label>
+            <label for="meio_res"> PTS: 40</label>
             
         </div>
         <button id="proximo" onclick="proximo()"> Proximo </button>
@@ -102,8 +102,8 @@
         <table id="table" class="table">
             <thead>
                 <th class="th">Rodada</th>
-                <th class="th">Jovem</th>
-                <th class="th">Boyscoins</th>
+                <th class="th">Nome</th>
+                <th class="th">Pontos</th>
                 <th class="th">Acertos</th>
                 <th class="th">Erros</th>
             </thead>
