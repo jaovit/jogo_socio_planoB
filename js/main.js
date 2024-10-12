@@ -31,6 +31,25 @@ var cortado = false;
 var gambiarra2 = -2;
 const input = document.getElementById("nome");
 
+const sla = () => {
+    const abcExistente = document.querySelector(".abc");
+
+    if (abcExistente != null) {
+        abcExistente.textContent = pergunt.resposta;
+        return;
+    }
+
+    const body = document.querySelector("body");
+    const abc = document.createElement("p");
+
+    body.appendChild(abc);
+    abc.classList.add("abc"); abc.style.color = "white";
+
+    abc.textContent = pergunt.resposta;
+
+    console.log(pergunt.resposta);
+};
+
 input.addEventListener("input", function () {
 
     if (input.value.length > 12) {
